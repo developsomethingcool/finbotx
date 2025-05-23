@@ -7,6 +7,7 @@ api_key = os.getenv("PRIVATE_KEY")
 
 
 def converter(from_curr, to_curr, amount):
+    """Makes API Request to currency exchange service to get up-to-date exchange rate"""
     URL = f"https://api.exchangerate.host/convert?access_key={api_key}&from={from_curr.upper()}&to={to_curr.upper()}&amount={amount}"
     try:
         r = requests.get(url = URL)
@@ -16,5 +17,5 @@ def converter(from_curr, to_curr, amount):
     except requests.exceptions.RequestException as errex:
         print("Exception request")
 
-print(converter("JPY", "EUR", 100000))
+#print(converter("JPY", "EUR", 100000))
 
