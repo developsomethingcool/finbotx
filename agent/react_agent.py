@@ -1,13 +1,6 @@
 from langgraph.prebuilt import create_react_agent
-from langgraph.checkpoint.memory import InMemorySaver
 from langchain_ollama import ChatOllama
-from langchain.memory import ConversationBufferMemory
-
-from langchain.prompts import PromptTemplate
 from agent.tools import exchange_rate_tool
-
-from IPython.display import Image, display
-from langchain_core.messages import HumanMessage, SystemMessage
 
 llm = ChatOllama(
     model="PetrosStav/gemma3-tools:27b",
@@ -20,7 +13,6 @@ react_agent = create_react_agent(
     model = llm,
     tools = tools,
 )
-
 
 # Visualize the graph
 #=================================
