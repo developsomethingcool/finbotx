@@ -17,5 +17,4 @@ def converter(from_curr, to_curr, amount):
     except requests.exceptions.RequestException as errex:
         print("Exception request")
 
-#print(converter("JPY", "EUR", 100000))
 
