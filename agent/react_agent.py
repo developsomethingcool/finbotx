@@ -33,7 +33,7 @@ with open(file_path, "wb") as file:
     file.write(image_data)
 
 messages = [
-    HumanMessage(content="What is the capital of France?")
+    HumanMessage(content="Convert 20 US Dollars into european EUR")
 ]
 
 messages = react_agent.invoke({"messages": messages})
